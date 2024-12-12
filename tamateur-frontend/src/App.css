@@ -1,0 +1,49 @@
+/* Ensure the app takes full height */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full height of the viewport */
+}
+
+.content {
+  flex: 1; /* Makes the content area expand to fill available space */
+}
+
+/* General Footer Styles */
+.footer {
+  display: flex;
+  justify-content: space-around;
+  background-color: #f1f1f1;
+  padding: 20px;
+  border-top: 1px solid #ccc;
+}
+
+.footer-section {
+  flex: 1;
+  padding: 0 20px;
+}
+
+.footer-section h4 {
+  margin: 0 0 10px;
+}
+
+.footer-section p {
+  margin: 0;
+}
+
+/* Mobile Styles */
+@media (max-width: 600px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-section {
+    margin-bottom: 20px;
+  }
+}

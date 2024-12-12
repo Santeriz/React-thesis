@@ -1,0 +1,18 @@
+/* Skeleton.css */
+
+.skeleton-container {
+    width: 100%; /* Ensure the skeleton fills the container */
+    height: 0; /* Height is determined by padding */
+    padding-top: 100%; /* Aspect ratio for a square skeleton */
+    position: relative; /* Position for absolute children */
+  }
+  
+  .react-loading-skeleton {
+    position: absolute; /* Position the skeleton absolutely */
+    top: 0; 
+    left: 0; 
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    border-radius: 10px; /* Consistent border radius */
+  }
+  

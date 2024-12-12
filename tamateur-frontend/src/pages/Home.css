@@ -1,0 +1,76 @@
+/* Ensure HTML and body take up the full viewport */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  overflow-y: auto; /* Allow vertical scrolling */
+}
+
+/* Styles for the home page */
+.home-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Full viewport height */
+  width: 100%; /* Full width */
+  background-color: #000; /* Solid black background */
+  text-align: center;
+  position: relative; /* Allow absolute positioning of child elements */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.home-page img {
+  max-height: 40%; /* Ensure it doesn't block the navbar */
+  max-width: 40%; /* Ensure it doesn't block the navbar */
+  animation: liike 5s alternate infinite ease-in-out; /* Apply animation with easing */
+  will-change: transform; /* Hint to the browser for optimization */
+  backface-visibility: hidden; /* Prevent flickering */
+  perspective: 1000px; /* Improve rendering */
+}
+
+/* Keyframes for zoom effect */
+@keyframes liike {
+  0% {
+    transform: scale(1); /* Initial size */
+  }
+  100% {
+    transform: scale(1.1); /* Zoom in effect */
+  }
+}
+
+/* Styles for the welcome text */
+.welcome-text {
+  color: #fff; /* White text color */
+  font-size: 1.5rem; /* Adjust the size as needed */
+  position: absolute; /* Position it absolutely within the home-page */
+  top: 60px; /* Distance from the top of the page */
+  left: 20px; /* Distance from the left side of the page */
+  line-height: 1.5; /* Adjust the line height for spacing between lines */
+  z-index: 10; /* Ensure the text is above other elements */
+   font-family: 'Arial', sans-serif;
+}
+
+/* Example media query for mobile devices */
+@media (max-width: 600px) {
+  .welcome-text {
+    top: 30px; /* txt mobil */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
+    width: 100%; /* Adjust width to fit within the screen */
+    background-color: transparent; /* background */
+    padding: 0;
+  }
+
+  .home-page img {
+    max-height: 45%;
+    max-width: 91%;
+    animation: liike 5s alternate infinite ease-in-out;
+    will-change: transform;
+    backface-visibility: hidden;
+    perspective: 1000px;
+    margin-top: 100px; /* img spot */
+  }
+
+}

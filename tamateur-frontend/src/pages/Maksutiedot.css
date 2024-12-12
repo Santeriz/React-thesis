@@ -1,0 +1,67 @@
+.payment-info-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #000;
+  }
+  
+  .payment-info-wrapper h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .payment-info-wrapper p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #fff;
+    text-align: center;
+    max-width: 600px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .payment-info-wrapper ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .payment-info-wrapper ul li {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 10px;
+    
+  }
+  
+  .payment-info-wrapper ul li:before {
+    content: "•";
+    color: #4caf50;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+    
+  }
+  
+  /* QR Code Placeholder */
+.qr-code-placeholder {
+    width: 200px;
+    height: 200px;
+    border: 2px dashed #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    background-color: #fff;
+  }
+  
+  .qr-code-placeholder p {
+    font-size: 1.1rem;
+    color: #fff;
+  }
+  
+  

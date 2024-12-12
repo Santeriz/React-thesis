@@ -1,0 +1,47 @@
+/* General Styles */
+.meista-container {
+  overflow-y: auto; /* Only allow vertical scrolling */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  min-height: 100vh; /* Ensure it takes up full viewport height */
+  background-color: rgba(0, 0, 0, 1); /* Solid black background */
+  position: relative; /* Ensure the background covers the full area */
+  display: flex; /* Use flexbox to manage layout */
+  flex-direction: column; /* Column layout */
+}
+
+body {
+  overflow-x: hidden; /* Prevent horizontal scroll on the body */
+}
+
+.meista-title {
+  color: #FFFFFF; /* White text color */
+  
+}
+
+.meista-text {
+  color: #FFFFFF; /* tekstiväri */
+  margin: 10px 10px; /* spacing */
+  line-height: 1.5;
+  font-size: 1.5em;
+  font-family: 'Arial', sans-serif;
+}
+
+.meista-text a {
+  color: #1E90FF; /* link color */
+  text-decoration: none; /* Remove underline */
+}
+
+.meista-text a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .meista-container {
+    height: auto; /* Auto height on smaller screens */
+  }
+
+  body {
+    overflow: auto; /* Allow scrolling on mobile */
+  }
+}

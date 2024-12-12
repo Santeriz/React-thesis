@@ -1,0 +1,132 @@
+/* General Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: center;
+  background-color: #000;
+  padding: 10px;
+  position: sticky; /* Sticky navbar */
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  transition: max-height 0.69s ease-in-out; /* heheheheXDD */
+  max-height: none;
+  overflow: visible; /* Show overflow */
+}
+
+.navbar-item {
+  margin: 0 10px;
+}
+
+.navbar-button {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px;
+  display: block;
+}
+
+.navbar-button:hover {
+  background-color: #555;
+  border-radius: 5px;
+}
+
+/* Mobile Styles */
+@media (max-width: 600px) {
+  .navbar {
+    justify-content: space-between;
+    padding: 20px; /* le blackboxmobi size */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  }
+
+  .menu-icon {
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 35px;
+    height: 20px;
+    cursor: pointer;
+    position: fixed;
+    right: 10px; /* x-cord */
+    top: 10px; /* y-cord */
+    z-index: 1000; /* burger x color */
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .menu-icon .bar {
+    height: 4px; /* burger size */
+    width: 95%; /* burger size */
+    background-color: white;
+    border-radius: 10px;
+    transition: all 0.5s ease-in-out; /* burger sp33d(d3m0n) */
+  }
+
+  /* hullu juttu */
+  .menu-icon.open .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .menu-icon.open .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-icon.open .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .navbar-menu {
+    flex-direction: column;
+    max-height: 0;
+    overflow: hidden;
+    width: 100%;
+    align-items: center;
+    position: relative;
+    z-index: 1000;
+    transition: max-height 0.5s ease-in-out; /* dropdownbar speed */
+    padding: 0;
+  }
+
+  .navbar-menu.open {
+    max-height: 350px;
+    padding: 10px 0; /* Add padding when open */
+  }
+
+  .navbar-item {
+    margin: 5px 0;
+    color: white;
+    padding: 10px; /* txt paddington */
+    font-size: 14px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .navbar-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .navbar-button {
+    font-size: 14px; /* txt size */
+
+  }
+
+  .navbar-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  /* Remove hover effect when menu is closed */
+  .navbar-menu:not(.open) .navbar-item:hover {
+    background-color: transparent;
+  }
+}
+
+/* positionit vois ehkä vaihtaa jos jaksaa kun
+"push content" bugaa jeajea ei oo avaimia, toimii silti! 

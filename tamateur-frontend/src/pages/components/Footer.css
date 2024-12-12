@@ -1,0 +1,44 @@
+.footer {
+  display: flex;
+  justify-content: center; /* Centers the footer sections */
+  padding: 1px;
+  background-color: #f1f1f1;
+  border-top: 1px solid #ddd;
+  flex-wrap: wrap; /* Allows wrapping of footer sections */
+  font-family: 'Arial', sans-serif;
+}
+
+.footer-section {
+  flex: 1;
+  margin: 0 10px;
+  min-width: 200px; /* Ensures the sections don't get too narrow */
+  text-align: center; /* Centers the text within each section */
+}
+
+/* Mobile responsive styling */
+@media (max-width: 768px) { 
+  .footer {
+    flex-direction: column; /* Stacks sections vertically */
+    text-align: center; /* Centers the text and icons */
+  }
+
+  .footer-section {
+    margin-bottom: 20px; /* Adds spacing between sections */
+  
+  }
+
+.social-media-icons a {
+  width: 50px; /* Set a fixed width */
+  height: 50px; /* Set a fixed height */
+  display: inline-flex; /* Ensures proper alignment */
+  justify-content: center; /* Centers the icon */
+  align-items: center; /* Centers the icon */
+}
+}
+
+@media (max-width: 768px) {
+  .social-media-icons a {
+    margin: 5px; /* Adjust margin for better spacing */
+    padding: 5px; /* Increase padding for touch targets */
+  }
+}

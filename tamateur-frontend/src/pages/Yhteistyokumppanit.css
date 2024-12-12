@@ -1,0 +1,60 @@
+.yhteistyokumppanit-container {
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 1);
+  padding: 20px;
+}
+
+.yhteistyokumppanit-title {
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.image-grid {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.image-item {
+  position: relative;
+  margin-left: 20px;
+  overflow: hidden; /* Prevents the clickable area from spilling out */
+}
+
+.image-link {
+  display: inline-block; /* Ensures the link only takes the space of the image */
+  width: 50%; /* Match the width of the image */
+}
+
+.yhteistyokumppanit-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 2px solid white;
+}
+
+.nele-caption {
+  color: #fff;
+  font-size: 1rem;
+  margin-top: 10px;
+  max-width: 50%; /* Ensure the caption's width matches the image width */
+  text-align: left;
+  line-height: 1.5;
+  word-wrap: break-word;
+  font-family: 'Arial', sans-serif;
+}
+
+@media (max-width: 768px) {
+  .meista-container {
+      height: auto;
+  }
+}
+
+.nele-title {
+  color: #fff; /* color */
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 20px;
+  max-width: 50%;
+}
